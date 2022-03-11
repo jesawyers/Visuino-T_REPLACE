@@ -1,0 +1,338 @@
+{
+  "Config": {
+    "Build": {
+      "Board": "esp8266:esp8266:d1:xtal=80,vt=flash,exception=disabled,stacksmash=disabled,ssl=all,mmu=3232,non32xfer=fast,eesz=4M2M,ip=lm2f,dbg=Disabled,lvl=None____,wipe=none,baud=921600"
+    }
+  },
+  "Version": "2",
+  "Product": "Visuino Pro - Visual Arduino Programming",
+  "Content": "OpenWire Diagram",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 768,
+          "Name": "Arduino",
+          "Instance": {
+            "AnalogInput": {
+              "*": [
+                {
+                  "+": "TArduinoESP8266AnalogInputChannel"
+                }
+              ]
+            },
+            "Serial": {
+              "*": [
+                {
+                  "Speed": 115200,
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.FormattedText1.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoESP8266HardwareSerial"
+                },
+                {
+                  "+": "TArduinoESP8266HardwareSerial1"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "Modules": {
+              "*": [
+                {
+                  "RemoteConnectedOutputPin": {
+                    "SinkPins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.NOT.InputPin"
+                      },
+                      {
+                        "Name": "__OpenWireRootUnit__.FormattedText1.Elements.DigitalElement.InputPin",
+                        "ID": "__OpenWireRootUnit__.FormattedText1.Elements._Item0.InputPin"
+                      }
+                    ]
+                  },
+                  "HostName": "FidoMCU",
+                  "+": "TArduinoESP8266WiFiModule",
+                  "AccessPoints": {
+                    "*": [
+                      {
+                        "SSID": "FidoNet-2G",
+                        "Channel": {
+                          "Enabled": true
+                        },
+                        "+": "TArduinoESP8266WiFiModuleRemoteAccessPoint",
+                        "Password": "Mh0ram33?"
+                      }
+                    ]
+                  },
+                  "Operations": {
+                    "*": [
+                      {
+                        "+": "TArduinoESP8266WiFiModuleSignalStrengthOperation"
+                      }
+                    ]
+                  },
+                  "Sockets": {
+                    "*": [
+                      {
+                        "Name": "TCP Server1",
+                        "Port": 8255,
+                        "+": "TArduinoWiFiTCPServerSocket"
+                      }
+                    ]
+                  },
+                  "AccessPoint": {
+                    "Enabled": false,
+                    "SSID": "",
+                    "Password": ""
+                  },
+                  "Time": {
+                    "NetworkTime": {
+                      "TimeZoneOffset": 0,
+                      "Servers": {
+                        "*": [
+                          {
+                            "+": "TArduinoESP8266WiFiNetworkTimeServer1"
+                          },
+                          {
+                            "+": "TArduinoESP8266WiFiNetworkTimeServer2"
+                          },
+                          {
+                            "+": "TArduinoESP8266WiFiNetworkTimeServer3"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "MACOutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.T_REPLACE.Inputs.IN.InputPin",
+                        "ID": "__OpenWireRootUnit__.T_REPLACE.Inputs._Item0.InputPin"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoPWMConfigModule"
+                },
+                {
+                  "+": "TArduinoESP8266ProcessorModule"
+                },
+                {
+                  "+": "TArduinoESP8266WatchdogTimerModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "+": "TArduinoESP8266_WeMos_D1_I2C"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSerial0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSerial0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMInterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMInterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMInterruptChannel"
+                },
+                {
+                  "DigitalInputPin": {
+                    "SourcePin": {
+                      "ID": "__OpenWireRootUnit__.NOT.OutputPin"
+                    }
+                  },
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSerial1InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSPI0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSPI0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMSPI0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalOpenDrainPWMInterruptChannel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoSPI"
+                }
+              ]
+            },
+            "BoardType": "WeMos D1 Mini"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 448,
+          "Name": "FormattedText1",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Serial.Item[ 0 ] (115200).InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Serial._Item0.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoFormattedText",
+            "Elements": {
+              "*": [
+                {
+                  "FalseValue": "DOWN",
+                  "Name": "WIFI",
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.RemoteConnectedOutputPin",
+                      "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.RemoteConnectedOutputPin"
+                    }
+                  },
+                  "+": "TArduinoFormattedTextElementDigital",
+                  "TrueValue": "UP",
+                  "InitialValue": false
+                },
+                {
+                  "Name": "SERNUM",
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.T_REPLACE.Outputs.Text.OutputPin",
+                        "ID": "__OpenWireRootUnit__.T_REPLACE.Outputs._Item0.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoFormattedTextElementText"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 272
+        },
+        {
+          "X": 272,
+          "Name": "T_REPLACE",
+          "Instance": {
+            "Members": "String _IN;\r\nString _REMOVE;\r\nString _OUT;",
+            "OnInit": "_REMOVE = \":\";\r\n_OUT = \"\";",
+            "Inputs": {
+              "*": [
+                {
+                  "Name": "IN",
+                  "OnData": "_IN = AValue;",
+                  "+": "TArduinoCustomCodeInputTextElement",
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.MACOutputPin",
+                      "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.MACOutputPin"
+                    }
+                  }
+                }
+              ]
+            },
+            "+": "TArduinoCustomCode",
+            "Outputs": {
+              "*": [
+                {
+                  "Name": "OUT",
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.FormattedText1.Elements.SERNUM.InputPin",
+                        "ID": "__OpenWireRootUnit__.FormattedText1.Elements._Item1.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoCustomCodeOutputTextElement"
+                }
+              ]
+            },
+            "OnExecute": "_IN.replace(_REMOVE,\"\");\r\n\r\nOUT.Send(_IN);"
+          },
+          "Type": "Component",
+          "Y": 608
+        },
+        {
+          "X": 256,
+          "Name": "ClockGenerator1",
+          "Instance": {
+            "Frequency": 0.5,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.FormattedText1.ClockInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoClockGenerator"
+          },
+          "Type": "Component",
+          "Y": 368
+        },
+        {
+          "X": 672,
+          "Name": "NOT",
+          "Instance": {
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.RemoteConnectedOutputPin",
+                "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.RemoteConnectedOutputPin"
+              }
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Digital[6].DigitalInputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Digital._Item6.DigitalInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoBooleanInverter"
+          },
+          "Type": "Component",
+          "Y": 1152
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "T_REPLACE"
+      ]
+    }
+  ]
+}
